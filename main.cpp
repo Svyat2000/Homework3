@@ -13,7 +13,7 @@ int main(){
     srand(2547);
     for (int i=0; i<n; i++){
         arr[i] = rand() % 56;
-        if (arr[i]>20){
+        if (arr[i]<4){
             sum+=arr[i];
 
          }
