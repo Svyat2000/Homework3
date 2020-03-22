@@ -7,7 +7,7 @@ int main(){
 
     ofstream file;
     file.open("c:\\Qt\\Projects\\1\\example4.txt");
-    int sum=0;//>20
+    int sum=0;//<4
     const int n=100;
     int arr[n];
     srand(2547);
@@ -19,7 +19,7 @@ int main(){
          }
         cout<<arr[i]<<endl;
      }
-    cout<<"Sum i>20: "<<sum;
+    cout<<"Sum i<4: "<<sum;
     file<<sum<<endl;
     file.close();
     return 0;
