@@ -11,25 +11,23 @@ int main(){
     const int n=20;
     int arr[n];
     srand(1365);
-    int nmax = 0, nmin=0;
+    int maxChet=0;
 
     for (int i=0; i<n; i++){
         arr[i] = (rand() % 101)-50;
-
+        if(arr[i]%2==0){
+            if(maxChet<arr[i]){
+                maxChet=arr[i];
+            }
+        }
 
         cout<<arr[i]<<endl;
         file<<arr[i]<<endl;
         }
-     for (int i=1;i<n;i++) {
-         if(fabs(nmax)<fabs(arr[i])){
-            nmax=arr[i];
-          }
-         if(fabs(nmin)>fabs(arr[i])){
-            nmin=arr[i];
-        }
-    }
-    cout<<"Max module number: "<<nmax<<endl<<"Min module number: "<<nmin<<endl;
-    file<<"Max module number: "<<nmax<<endl<<"Min module number: "<<nmin<<endl;
+
+
+    cout<<"Max chet number: "<<maxChet<<endl;
+    file<<"Max chet number: "<<maxChet<<endl;
 
     file.close();
     return 0;
